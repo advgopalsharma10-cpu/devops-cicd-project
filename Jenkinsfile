@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 environment {
     DOCKERHUB_USERNAME = 'gopalsharma1010'
     IMAGE_NAME         = 'devops-node-app'
@@ -142,6 +141,5 @@ post {
         sh 'docker logout || true'
     }
 }
-```
 
 }
