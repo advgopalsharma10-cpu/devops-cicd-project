@@ -126,3 +126,13 @@ pipeline {
     }
   }
 }
+stage('Build Docker Image') {
+    steps {
+        dir('app') {
+            sh """
+                docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
+            """
+        }
+    }
+}
+
